@@ -1,11 +1,11 @@
 <?php
 
-namespace MiddlewaresPsr7\Sanitization;
+namespace MiddlewaresPsr7\Middleware;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class PostData
+class Sanitization
 {
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {

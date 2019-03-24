@@ -5,7 +5,7 @@
   "keywords": [
     "psr7-middlewares"
   ],
-  "homepage": "https://github.com/ricardodecarvalho/psr7-middlewares",
+  "homepage": "https://github.com/ricardodecarvalho/middlewares-psr7",
   "license": "MIT",
   "authors": [
     {
