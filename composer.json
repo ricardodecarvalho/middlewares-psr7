@@ -1,0 +1,26 @@
+{
+  "name": "ricardodecarvalho/middlewares-psr7",
+  "type": "library",
+  "description": "psr7-middlewares",
+  "keywords": [
+    "psr7-middlewares"
+  ],
+  "homepage": "https://github.com/ricardodecarvalho/psr7-middlewares",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ricardo de Carvalho",
+      "email": "skapitao@gmail.com",
+      "homepage": "http://ricardodecarvalho/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "MiddlewaresPsr7\\": "./src"
+    }
+  }
+}
