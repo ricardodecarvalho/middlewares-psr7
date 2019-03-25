@@ -10,9 +10,13 @@ class Sanitization
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
         $filteredPostData = [];
-        foreach ($request->getParams() as $key => $params) {
-            if (isset($params) && !empty($params)) {
-                $filteredPostData[$key] = trim($params);
+        if (count($request->getParams()) > 0) {
+            foreach ($request->getParams() as $key => $params) {
+                if (!empty($params) && !is_array($params)) {
+                    $filteredPostData[$key] = trim($params);
+                } else {
+                    $filteredPostData[$key] = $params;
+                }
             }
         }
         $request = $request->withParsedBody($filteredPostData);
