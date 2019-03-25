@@ -11,7 +11,9 @@ class Sanitization
     {
         $filteredPostData = [];
         foreach ($request->getParams() as $key => $params) {
-            $filteredPostData[$key] = trim($params);
+            if (isset($params) && !empty($params)) {
+                $filteredPostData[$key] = trim($params);
+            }
         }
         $request = $request->withParsedBody($filteredPostData);
         return $next($request, $response);
